@@ -1,0 +1,7 @@
+[[service]]
+name = "bootShell"
+background = false
+command = [
+	"bun",
+	"./src/shell.js",
+]

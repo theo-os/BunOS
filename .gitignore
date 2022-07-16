@@ -1,0 +1,16 @@
+zig-out
+zig-cache
+node_modules
+*.iso
+*.img
+sysroot/proc
+sysroot/dev
+sysroot/sys
+sysroot/tmp
+sysroot/run
+sysroot/lib
+sysroot/lib64
+sysroot/usr/lib
+sysroot/usr/lib64
+build
+

@@ -67,5 +67,5 @@ int main(int argc, char *argv[]) {
   mount_dev();
 
   /*return execlp("ls", "ls", "./src", NULL);*/
-  return execl("/bin/bun", "/bin/bun", "./src/shell.js", NULL);
+  return execl("/bin/bun", "/bin/bun", "./src/init.js", NULL);
 }

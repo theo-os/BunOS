@@ -12,5 +12,6 @@ sysroot/lib
 sysroot/lib64
 sysroot/usr/lib
 sysroot/usr/lib64
+sysroot/bin
 build
 

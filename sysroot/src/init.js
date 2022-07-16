@@ -25,22 +25,22 @@ const serviceConfig = await import("./services.toml");
 
 console.log("Hello from BunOS 🚀");
 
-console.log(serviceConfig.default);
-
 for (const service of serviceConfig.default.service) {
 	console.log(`starting service ${service.name}`);
 
 
-	//if (service.background) {
 	const pid = libc.fork();
-	if (pid == 0)
+	if (pid == 0 && service.background)
 		libc.execvp(
 			encodeStr(service.command[0]),
 			encodeStrArray(service.command),
 		);
-	//} else libc.execvp(
-	//encodeStr(service.command[0]),
-	//encodeStrArray(service.command),
-	//);
+	else
+		libc.execvp(
+			encodeStr(service.command[0]),
+			encodeStrArray(service.command),
+		);
 }
+
+while (true) { }
 
